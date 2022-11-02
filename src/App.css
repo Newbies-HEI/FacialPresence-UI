@@ -1,0 +1,87 @@
+:root {
+  background-color: rgba(0, 0, 0, 1);
+  padding: 10vh;
+}
+
+.container {
+  padding-left: 5vh;
+  padding-right: 5vh;
+  padding-bottom: 5vh;
+  padding-top: 1vh;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.container-title, hr {
+  text-align: center;
+  color: green;
+}
+
+.event-time, .event-description {
+  display: flex;
+  flex-direction: row;
+}
+
+.event-time div, .event-description div {
+  flex-basis: 30%;
+  margin: auto;
+  text-align: center;
+}
+
+.event-description {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.event-time {
+  margin-bottom: 5%;
+  margin-top: 2%;
+}
+
+.event-participant {
+  padding: 1%;
+  margin-left: 10%;
+}
+
+.event-participant-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.checkbox {
+  margin: 1%;
+  border-left: 1px dotted rgba(0, 0, 0, 0.75);
+}
+
+.exit-button {
+  position: absolute;
+  left: 140vh;
+}
+
+.presence-button {
+  position: absolute;
+  left: 135vh;
+}
+
+.login-title {
+  text-align: center;
+  border-radius: 50%;
+}
+
+.login div {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.container-login {
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  background-color: white;
+  padding: 3%;
+  border-radius: 10px;
+  width: max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+}

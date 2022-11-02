@@ -1,0 +1,38 @@
+.verification{
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    bottom: 3vh;
+    left: 10vw;
+    border-radius: 5px;
+    border: 1px solid red;
+    background-color: red;
+    color: white;
+    margin-right: 3%;
+}
+
+.finish{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    bottom: 3vh;
+    right: 10vw;
+    border-radius: 5px;
+    border: 1px solid rgb(1, 11, 71);
+    background-color: rgb(1, 11, 71);
+    color: white;
+    margin-left: 6%;
+    margin-top: 1%;
+}
+
+.bouton{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40%;
+}
+
+.webcam {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
