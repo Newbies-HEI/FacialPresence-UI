@@ -10,18 +10,18 @@ import { Course } from '../types/type';
 const NewEvent = () => {
     const Navigate = useNavigate();
     const [courses, setCourses] = useState<Course[]>([]);
-	const getCandidate = async () => {
-    const response = await axios.get("http://localhost:8080")
-		.then(
-			response => {
-				setCourses(response.data)
-			}
-		)
-		.catch(
-			error => {
-				console.error(error);
-			}
-		)
+	const getCourse = async () => {
+        const response = await axios.get("https://api-dev.hei.school/courses")
+            .then(
+                response => {
+                    setCourses(response.data)
+                }
+            )
+            .catch(
+                error => {
+                    console.error(error);
+                }
+            )
     }
     return(
         <>
