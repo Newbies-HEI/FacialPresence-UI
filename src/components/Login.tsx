@@ -32,11 +32,11 @@ const Login = () => {
                 <div className="login-body">
                     <div>
                         <InputLabel>Username:</InputLabel>
-                        <Input value = ""  onChange = {(e) => setUser(e.target.value)}/>
+                        <Input value = {user}  onChange = {(e) => {setUser(e.target.value)}}/>
                     </div>
                     <div>
                         <InputLabel>Password:</InputLabel>
-                        <Input type='password'value = ""  onChange = {(e) => setPassword(e.target.value)}/> 
+                        <Input type='password'value = {password}  onChange = {(e) => {setPassword(e.target.value)}}/> 
                     </div>
                     <div>
                         <Button color='primary' variant='contained' className="login-button" onClick={() => {
