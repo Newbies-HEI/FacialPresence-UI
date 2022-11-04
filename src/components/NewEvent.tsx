@@ -10,18 +10,18 @@ import { Course } from '../types/type';
 const NewEvent = () => {
     const Navigate = useNavigate();
     const [courses, setCourses] = useState<Course[]>([]);
-	const getCandidate = async () => {
-    const response = await axios.get("http://localhost:8080")
-		.then(
-			response => {
-				setCourses(response.data)
-			}
-		)
-		.catch(
-			error => {
-				console.error(error);
-			}
-		)
+	const getCourse = async () => {
+        const response = await axios.get("https://api-dev.hei.school/courses")
+            .then(
+                response => {
+                    setCourses(response.data)
+                }
+            )
+            .catch(
+                error => {
+                    console.error(error);
+                }
+            )
     }
     return(
         <>
@@ -79,7 +79,9 @@ const NewEvent = () => {
                     <div className='event-participant-form'>
                         <FormControlLabel control={<Checkbox />} label="G1" className='checkbox'/>
                         <FormControlLabel control={<Checkbox />} label="G2" className='checkbox'/>
-                        <FormControlLabel control={<Checkbox />} label="G3" className='checkbox'/>
+                        <FormControlLabel control={<Checkbox />} label="H1" className='checkbox'/>
+                        <FormControlLabel control={<Checkbox />} label="H2" className='checkbox'/>
+                        <FormControlLabel control={<Checkbox />} label="H3" className='checkbox'/>
                     </div>
                 </div>
 

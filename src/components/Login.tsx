@@ -1,9 +1,27 @@
 import { Button, Input, InputLabel } from '@mui/material';
-import React from 'react';
+import axios from 'axios';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 
 const Login = () => {
     const Navigate = useNavigate();
+    const [user, setUser] = useState<string>("");
+    const [password, setPassword] = useState<string>("");
+    const authenticate = async () => {
+        const response = await axios.post("https://api-dev.hei.school/login",{
+            "username": user,
+            "password": password
+        })
+            .then(
+                () => {
+                    Navigate("/NewEvent")
+                }
+            )
+            .catch(
+
+            )
+    }
     return(
         <>
         <div className="container-login">
@@ -14,15 +32,15 @@ const Login = () => {
                 <div className="login-body">
                     <div>
                         <InputLabel>Username:</InputLabel>
-                        <Input/>
+                        <Input value = {user}  onChange = {(e) => {setUser(e.target.value)}}/>
                     </div>
                     <div>
                         <InputLabel>Password:</InputLabel>
-                        <Input type='password'/> 
+                        <Input type='password'value = {password}  onChange = {(e) => {setPassword(e.target.value)}}/> 
                     </div>
                     <div>
-                        <Button color='primary' variant='contained' onClick={() => {
-                            Navigate("/NewEvent")
+                        <Button color='primary' variant='contained' className="login-button" onClick={() => {
+                            authenticate()
                         }}>Continue</Button>
                     </div>
                 </div>
