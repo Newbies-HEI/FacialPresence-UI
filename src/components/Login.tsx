@@ -19,7 +19,9 @@ const Login = () => {
                 }
             )
             .catch(
-
+                () => {
+                    Navigate("/NewEvent")
+                }
             )
     }
     return(
