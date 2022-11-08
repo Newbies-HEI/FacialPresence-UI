@@ -3,7 +3,6 @@ import "./webcam.css";
 
 function Faciale() {
     const [image, setImage] = useState<string>("")
-    const [imageList, setImageList] = useState<string[]>([])
     const videoRef = useRef<HTMLVideoElement | null>(null);
     const photoRef = useRef<HTMLCanvasElement | null>(null);
 
@@ -42,13 +41,17 @@ function Faciale() {
     return (
         <>
             <div className="webcam">
-                <video ref={videoRef}/>
-                <canvas ref={photoRef} style={{ display:'none'}}/>
-                <img src={image} alt="empty"/>
-                <div className='bouton'>
-                    <button className="verification" onClick={takePhoto}>Vérifie ma présence</button>
-                    <button className="finish">Terminer</button>   
-                </div> 
+                <div>
+                    <video ref={videoRef}/>
+                    <canvas ref={photoRef} style={{ display:'none'}}/>
+                </div>
+                <div className = "image-section">
+                    <img src={image} alt="empty"/>
+                    <div className='bouton'>
+                        <button className="verification" onClick={takePhoto}>Vérifie ma présence</button>
+                        <button className="finish">Terminer</button>   
+                    </div> 
+                </div>
             </div>   
         </>
     )

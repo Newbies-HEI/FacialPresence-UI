@@ -23,11 +23,29 @@
     position: absolute;
     display: flex;
     flex-direction: row;
-    right: 15%;
-    bottom: 50%;
-    top: 50%;
+    bottom: 10%;
 }
 
 .webcam {
+    display: flex;
+    flex-direction: row;
+}
+
+.webcam div {
+    padding-left: 2%;
+    padding-right: 2%;
+    flex-basis: 50%;
+    margin: auto;
+}
+
+.image-section {
     position: relative;
+    width: 40vw;
+    height: 80vh;
+}
+
+image {
+    position: absolute;
+    top: 50%;
+    left: 30%;
 }
