@@ -41,9 +41,12 @@ const Login = () => {
                         <Input type='password'value = {password}  onChange = {(e) => {setPassword(e.target.value)}}/> 
                     </div>
                     <div>
-                        <Button color='primary' variant='contained' className="login-button" onClick={() => {
-                            authenticate()
-                        }}>Continue</Button>
+                        <Button color='primary' variant='contained' className="login-button" onClick={
+                            () => {
+                                authenticate()
+                            }}>
+                                Continue
+                        </Button>
                     </div>
                 </div>
             </div>
